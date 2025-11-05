@@ -1,0 +1,69 @@
+@use "../../../../shared/scss/abstracts/variables" as v;
+@import '../../../../shared/scss/functions/functions';
+
+.pizza {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: toRem(1380px);
+        justify-content: center;
+        gap: toRem(27px);
+    }
+
+    &__item {
+        padding: toRem(23px) toRem(22px);
+        border: toRem(1px) v.$gray1-color solid;
+        border-radius: toRem(180px) toRem(180px) toRem(30px) toRem(30px);
+        display: flex;
+        flex-direction: column;
+        gap: toRem(21px);
+        transition: 0.3s;
+        justify-content: space-between;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    }
+
+    &__item_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: toRem(243px);
+        width: 100%;
+        gap: toRem(21px);
+    }
+
+    &__img {
+        width: toRem(206px);
+        height: toRem(209px);
+
+    }
+
+    &__item_title {
+        font-weight: 600;
+        font-size: toRem(24px);
+    }
+
+    &__item_description {
+        font-weight: 200;
+        font-size: toRem(14px);
+    }
+
+    &__item_price {
+        font-size: toRem(24px);
+        font-weight: 600;
+        color: v.$green-color;
+    }
+
+    &__item_options {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(10px);
+    }
+
+
+
+}

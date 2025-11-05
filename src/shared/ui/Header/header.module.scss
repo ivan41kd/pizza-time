@@ -1,0 +1,41 @@
+@import '../../scss/functions/functions';
+
+.header {
+  padding: toRem(40px) 0px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: toRem(36px);
+  }
+
+  &__nav {
+    gap: toRem(36px);
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+    gap: toRem(36px);
+    align-items: center;
+  }
+
+  &__menu_item {
+    font-size: toRem(16px);
+    font-weight: 400;
+  }
+}

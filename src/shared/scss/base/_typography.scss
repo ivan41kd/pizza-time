@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as v;
+@import '../functions/functions';
+
+html {
+    font-size: calc(v.$base-font-size / v.$design-desktop-width) * 100vw;
+
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+
+
+}
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-result .ant-result-title,
+:where(.css-dev-only-do-not-override-wfhtqi).ant-result .ant-result-subtitle,
+:where(.css-dev-only-do-not-override-wfhtqi).ant-empty .ant-empty-description {
+    color: inherit !important
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-select-single .ant-select-selector,
+:where(.css-dev-only-do-not-override-wfhtqi).ant-select {
+    height: toRem(40px);
+    font-size: toRem(14px);
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-result .ant-result-title {
+    font-size: toRem(24px);
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-result .ant-result-icon>.anticon {
+    font-size: toRem(72px);
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-result .ant-result-icon {
+    margin-bottom: toRem(24px);
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-result .ant-result-extra {
+    margin-top: toRem(24px);
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-badge .ant-badge-count-sm {
+    min-width: toRem(14px);
+    height: toRem(14px);
+    font-size: toRem(12px);
+    line-height: toRem(14px);
+    border-radius: toRem(7px);
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-badge {
+    font-size: 1rem;
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-input-lg {
+    padding: toRem(7px) toRem(11px);
+    font-size: toRem(16px);
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    padding: 0 toRem(11px);
+}
+
+:where(.css-dev-only-do-not-override-wfhtqi).ant-select .ant-select-arrow {
+    height: toRem(12px);
+    font-size: toRem(12px);
+    inset-inline-end: toRem(11px);
+    margin-top: toRem(-6px);
+}

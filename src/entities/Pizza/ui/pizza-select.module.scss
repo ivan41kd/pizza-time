@@ -1,0 +1,27 @@
+@import '../../../shared/scss/functions/_functions.scss';
+
+.pizzaSelect {
+  &:global() {
+    .ant-select {
+      height: toRem(40px) !important;
+    }
+
+    .ant-select-selector {
+      border: toRem(1px) #4f4f4f solid !important;
+      border-radius: toRem(25px);
+    }
+
+    .ant-select-selection-search-input,
+    .ant-select-selection-item {
+      font-weight: 400;
+      font-size: toRem(16px) !important;
+      color: #333333;
+    }
+
+    :where(.css-dev-only-do-not-override-wfhtqi).ant-select-single,
+    :where(.css-dev-only-do-not-override-wfhtqi).ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+      font-size: toRem(16px) !important;
+
+    }
+  }
+}

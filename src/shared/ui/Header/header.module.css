@@ -1,0 +1,33 @@
+.header {
+  padding: 2.5rem 0px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+.header__nav {
+  gap: 2.25rem;
+  display: flex;
+}
+.header__menu {
+  display: flex;
+  gap: 2.25rem;
+  align-items: center;
+}
+.header__menu_item {
+  font-size: 1rem;
+  font-weight: 400;
+}

@@ -1,0 +1,17 @@
+.pizzaSelect:global() .ant-select {
+  height: 2.5rem !important;
+}
+.pizzaSelect:global() .ant-select-selector {
+  border: 0.0625rem #4f4f4f solid !important;
+  border-radius: 1.5625rem;
+}
+.pizzaSelect:global() .ant-select-selection-search-input,
+.pizzaSelect:global() .ant-select-selection-item {
+  font-weight: 400;
+  font-size: 1rem !important;
+  color: #333333;
+}
+.pizzaSelect:global() :where(.css-dev-only-do-not-override-wfhtqi).ant-select-single,
+.pizzaSelect:global() :where(.css-dev-only-do-not-override-wfhtqi).ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+  font-size: 1rem !important;
+}

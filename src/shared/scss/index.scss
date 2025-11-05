@@ -1,0 +1,6 @@
+@use "./base/reset";
+@use "./base/typography";
+@use "./abstracts/variables";
+@use './functions/functions';
+
+@import '../../../node_modules/tailwindcss/'
