@@ -1,6 +1,7 @@
 import { usePizzaContext } from '@/providers/PizzaProvider';
 import Container from '../../components/Container/Container';
-import PizzaItems from '@/entities/Pizza/ui/index';
+import PizzaItems from '@/widgets/ui/PizzaItems/ui/PizzaItems';
+
 import s from './menu.module.scss';
 
 const Menu = () => {

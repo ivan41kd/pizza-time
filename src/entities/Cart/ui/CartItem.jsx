@@ -8,7 +8,7 @@ const CartItem = ({ order, img, title, price, size, quantity }) => {
   const { increasePizza, decreasePizza } = useCartContext();
 
   return (
-    <div className="rounded-lg !p-4 !border-2 !border-gray-700 flex w-full">
+    <div className="rounded-lg p-4! border-2! border-gray-700! flex w-full">
       <div className="flex items-center gap-4 w-full justify-between">
         <div className="flex items-center gap-4 w-full justify-between">
           <div className="flex items-center gap-4">
