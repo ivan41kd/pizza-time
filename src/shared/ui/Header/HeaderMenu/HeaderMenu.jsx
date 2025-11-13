@@ -10,11 +10,12 @@ import { useThemeContext } from '../../../../providers/ThemeProvider';
 const HeaderMenu = () => {
   const { cart } = useCartContext();
   const { isDark } = useThemeContext();
+
   return (
     <div className={s.header__menu}>
-      <Link to={'/search'} className="flex items-center">
+      <Link to={'/search'} className="flex h-full items-center">
         <SearchOutlined
-          className="transition delay-5 duration-300 ease-in-out"
+          className="transition delay-5 duration-300  size-5 ease-in-out"
           style={{ fontSize: '1.4rem', color: isDark ? '#00240f' : 'white' }}
         />
       </Link>
@@ -23,7 +24,7 @@ const HeaderMenu = () => {
         <Link to={'/cart'} className="flex items-center">
           <Badge count={cart.length} className="!w-full" size="small">
             <ShoppingCartOutlined
-              className="transition delay-5 duration-300 ease-in-out"
+              className="transition delay-5 duration-300 size-5 ease-in-out"
               style={{
                 fontSize: '1.4rem',
                 color: isDark ? '#00240f' : 'white',
