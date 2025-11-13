@@ -1,5 +1,5 @@
 import { useCartContext } from '../../../../../providers/CartProvider';
-import CartItem from '../../../../../entities/CartItem/ui';
+import CartItem from '@/entities/Cart/ui/CartItem';
 
 const CartItems = () => {
   const { cart } = useCartContext();

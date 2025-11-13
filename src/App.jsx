@@ -3,7 +3,7 @@ import { ConfigProvider } from 'antd';
 import Main from './pages/Main';
 import Header from './shared/ui/Header';
 import PizzaProvider from './providers/PizzaProvider';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Menu from './pages/Menu/Menu';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import NotFound from './pages/NotFound/NotFound';
@@ -38,33 +38,31 @@ const App = () => {
       <ThemeProvider>
         <CartProvider>
           <PizzaProvider>
-            <BrowserRouter>
-              <Page>
-                <Header navigation={navigation} />
-                <Routes>
-                  <Route
-                    path={'/menu'}
-                    element={
-                      <ProtectedRoute>
-                        <Menu />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route path={'/search'} element={<Search />} />
-                  <Route
-                    path={'/cart'}
-                    element={
-                      <ProtectedRoute>
-                        <Cart />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route path={'/pizzas/:id'} element={<Detail />} />
-                  <Route path={'/'} element={<Main />} />
-                  <Route path={'*'} element={<NotFound />} />
-                </Routes>
-              </Page>
-            </BrowserRouter>
+            <Page>
+              <Header navigation={navigation} />
+              <Routes>
+                <Route
+                  path={'/menu'}
+                  element={
+                    <ProtectedRoute>
+                      <Menu />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path={'/search'} element={<Search />} />
+                <Route
+                  path={'/cart'}
+                  element={
+                    <ProtectedRoute>
+                      <Cart />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path={'/pizzas/:id'} element={<Detail />} />
+                <Route path={'/'} element={<Main />} />
+                <Route path={'*'} element={<NotFound />} />
+              </Routes>
+            </Page>
           </PizzaProvider>
         </CartProvider>
       </ThemeProvider>
