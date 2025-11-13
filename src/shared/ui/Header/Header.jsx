@@ -6,6 +6,7 @@ import HeaderMenu from './HeaderMenu/HeaderMenu';
 import s from './header.module.scss';
 import Container from '../../../components/Container/Container';
 import { useThemeContext } from '@/providers/ThemeProvider';
+import { NavLink } from 'react-router-dom';
 
 const Header = ({ navigation }) => {
   const { isDark } = useThemeContext();
@@ -17,14 +18,14 @@ const Header = ({ navigation }) => {
     >
       <Container>
         <div className={s.header__wrapper}>
-          <a href="/">
+          <NavLink to={'/'} className={'w-full flex items-center'}>
             <div className={s.header__logo}>
               <img src={headerLogo} className="img size-16" />
               <p className="text-green-950 dark:text-white !font-semibold !text-2xl">
                 Pizza Time
               </p>
             </div>
-          </a>
+          </NavLink>
 
           <div className={s.header__right}>
             <HeaderNav items={navigation} />
