@@ -1,5 +1,4 @@
-@use "../../scss/abstracts/variables" as v;
-@import '../../scss/functions/functions';
+@use '../../scss/core.scss' as *;
 
 .button {
     border-radius: toRem(25px);
@@ -7,17 +6,18 @@
     text-transform: uppercase;
     font-size: toRem(16px);
     font-weight: 600;
-    background: v.$red-color;
+    background: $red-color;
     color: white;
     transition: 0.3s;
+    cursor: pointer;
 
     &:hover {
-        background: v.$red-color-hover;
+        background: $red-color-hover;
         transition: 0.3s;
     }
 
     &:disabled {
-        background: v.$gray-color;
+        background: $gray-color;
         cursor: no-drop;
     }
 }

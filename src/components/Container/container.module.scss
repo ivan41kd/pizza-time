@@ -1,4 +1,4 @@
-@import '../../shared/scss/functions/functions';
+@use '@scss/core.scss' as *;
 
 .container {
     padding: 0 toRem(90px);

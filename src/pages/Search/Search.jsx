@@ -31,7 +31,7 @@ const Search = () => {
             value={value}
             onChange={searchPizza}
             size="large"
-            className="!w-5xl"
+            className="w-5xl!"
             prefix={<SearchOutlined />}
           />
           {value !== '' && results.length < 1 ? (

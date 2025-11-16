@@ -1,8 +1,7 @@
-@use '../abstracts/variables' as v;
-@import '../functions/functions';
+@use '../core.scss' as *;
 
 html {
-    font-size: calc(v.$base-font-size / v.$design-desktop-width) * 100vw;
+    font-size: calc($base-font-size / $design-desktop-width) * 100vw;
 
 }
 
@@ -13,7 +12,7 @@ body {
 }
 
 
-@custom-variant dark (&:where(.dark, .dark *));
+
 
 :where(.css-dev-only-do-not-override-wfhtqi).ant-result .ant-result-title,
 :where(.css-dev-only-do-not-override-wfhtqi).ant-result .ant-result-subtitle,
@@ -70,3 +69,5 @@ body {
     inset-inline-end: toRem(11px);
     margin-top: toRem(-6px);
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

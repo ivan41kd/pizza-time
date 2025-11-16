@@ -1,4 +1,4 @@
-@import '../../scss/functions/functions';
+@use '../../scss/core.scss' as *;
 
 .header {
   padding: toRem(40px) 0px;

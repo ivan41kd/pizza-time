@@ -1,5 +1,4 @@
-@use "../../../../shared/scss/abstracts/variables" as v;
-@import '../../../../shared/scss/functions/functions';
+@use '@scss/core.scss' as *;
 
 .pizza {
     &__items {
@@ -12,7 +11,7 @@
 
     &__item {
         padding: toRem(23px) toRem(22px);
-        border: toRem(1px) v.$gray1-color solid;
+        border: toRem(1px) $gray1-color solid;
         border-radius: toRem(180px) toRem(180px) toRem(30px) toRem(30px);
         display: flex;
         flex-direction: column;
@@ -55,7 +54,7 @@
     &__item_price {
         font-size: toRem(24px);
         font-weight: 600;
-        color: v.$green-color;
+        color: $green-color;
     }
 
     &__item_options {

@@ -6,11 +6,16 @@ import styles from './pizza-select.module.scss';
 import { formatCurrency } from '../../../shared/lib/FormatPrice';
 
 import { useState } from 'react';
-import { useCartContext } from '../../../providers/CartProvider';
+import { useDispatch, useSelector } from 'react-redux';
+import { addPizza } from '@/entities/Cart/redux/actions';
+import { useMessageApi } from '@/providers/MessageProvider';
 
 const PizzaItem = ({ id, img, title, description, price, sizes }) => {
-  const { addToCart } = useCartContext();
+  const messageApi = useMessageApi();
+
   const [pricePizza, setPricePizza] = useState(price);
+  const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state.cart);
 
   const [pizza, setPizza] = useState({
     id,
@@ -36,6 +41,32 @@ const PizzaItem = ({ id, img, title, description, price, sizes }) => {
     }));
   };
 
+  const addClick = (pizza) => {
+    const existingItem = cart.find(
+      (item) => item.title === pizza.title && item.size.size === pizza.size.size
+    );
+    dispatch(addPizza(pizza));
+    existingItem
+      ? cart.forEach((cartItem) => {
+          if (
+            cartItem.title === pizza.title &&
+            cartItem.size.size === pizza.size.size
+          ) {
+            cartItem.quantity + 1 <= 10 &&
+              messageApi.open({
+                type: 'success',
+                content: `${pizza.title} (${pizza.size.size}) ${
+                  cartItem.quantity + 1
+                }x in cart!`,
+              });
+          }
+        })
+      : messageApi.open({
+          type: 'success',
+          content: `${pizza.title} (${pizza.size.size}) added to cart!`,
+        });
+  };
+
   return (
     <div className={s.pizza__item}>
       <div className={s.pizza__item_info}>
@@ -56,7 +87,7 @@ const PizzaItem = ({ id, img, title, description, price, sizes }) => {
         </p>
       </div>
       <div className="flex flex-col">
-        <p className={`${s.pizza__item_price} text-center !mb-4`}>
+        <p className={`${s.pizza__item_price} text-center mb-4!`}>
           {formatCurrency(pricePizza)}
         </p>
         <div className={s.pizza__item_options}>
@@ -79,7 +110,7 @@ const PizzaItem = ({ id, img, title, description, price, sizes }) => {
               ))}
             </Select>
           )}
-          <Button title={'Add to cart'} onClick={() => addToCart(pizza)} />
+          <Button title={'Add to cart'} onClick={() => addClick(pizza)} />
         </div>
       </div>
     </div>

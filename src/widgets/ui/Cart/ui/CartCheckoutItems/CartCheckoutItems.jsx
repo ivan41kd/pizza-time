@@ -1,8 +1,8 @@
-import { useCartContext } from '../../../../../providers/CartProvider';
+import { useSelector } from 'react-redux';
 import { formatCurrency } from '../../../../../shared/lib/FormatPrice';
 
 const CartCheckoutItems = () => {
-  const { cart } = useCartContext();
+  const { cart } = useSelector((state) => state.cart);
   return (
     <div className="flex flex-col gap-4">
       {cart.map((item, index) => {
@@ -10,11 +10,11 @@ const CartCheckoutItems = () => {
           <div className="flex justify-between items-center" key={index}>
             <div className="flex items-baseline gap-2">
               <div className="flex flex-col">
-                <p className="!text-xl">{item.title}</p>
-                <p className="!text-base">{item.size.size}</p>
+                <p className="text-xl!">{item.title}</p>
+                <p className="text-base!">{item.size.size}</p>
               </div>
               <div className="flex">
-                <p className="!text-base">x{item.quantity}</p>
+                <p className="text-base!">x{item.quantity}</p>
               </div>
             </div>
             <p>{formatCurrency(item.price * item.quantity)}</p>

@@ -1,4 +1,4 @@
-@import '../../../shared/scss/functions/_functions.scss';
+@use '@scss/core.scss' as *;
 
 .pizzaSelect {
   &:global() {

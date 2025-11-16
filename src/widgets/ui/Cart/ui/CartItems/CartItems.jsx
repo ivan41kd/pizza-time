@@ -1,8 +1,8 @@
-import { useCartContext } from '../../../../../providers/CartProvider';
 import CartItem from '@/entities/Cart/ui/CartItem';
+import { useSelector } from 'react-redux';
 
 const CartItems = () => {
-  const { cart } = useCartContext();
+  const { cart } = useSelector((state) => state.cart);
 
   return (
     cart.length >= 1 && (

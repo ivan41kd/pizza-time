@@ -1,4 +1,4 @@
-@import '../../../../shared/scss/functions/functions';
+@use '@scss/core.scss' as *;
 
 .hero {
     &__wrapper {
