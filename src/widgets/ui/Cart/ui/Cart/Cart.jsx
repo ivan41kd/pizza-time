@@ -18,7 +18,7 @@ const Cart = () => {
       <Result
         icon={<ExclamationCircleOutlined className="text-red-500!" />}
         title="Your cart is empty!"
-        className="dark:text-white"
+        className="dark:text-white!"
         extra={
           <Link to={'/menu'}>
             <Button title={'Back to menu'} />

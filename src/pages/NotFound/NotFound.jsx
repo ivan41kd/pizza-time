@@ -8,7 +8,7 @@ const NotFound = () => {
       status="404"
       title="404"
       subTitle="Sorry, the page you visited does not exist."
-      className="!dark:text-white"
+      className="dark:text-white!"
       extra={
         <Link to={'/'}>
           <Button title={'Back Home'} />
