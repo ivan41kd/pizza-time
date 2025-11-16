@@ -37,7 +37,7 @@ const Search = () => {
           {value !== '' && results.length < 1 ? (
             <Empty
               description={'Pizza not found'}
-              className="dark:text-white"
+              className="!dark:text-white"
             />
           ) : (
             ''
