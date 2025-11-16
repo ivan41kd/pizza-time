@@ -31,6 +31,8 @@ const App = () => {
       theme={{
         token: {
           fontFamily: 'Fira Sans',
+          colorTextHeading: 'inherit',
+          colorTextDescription: 'inherit',
         },
       }}
     >
